@@ -1,8 +1,8 @@
 import { SANTIAGO_CONTENT } from '../constants.tsx';
-import * as Icons from './Icons';
-import InfluenceTable from './InfluenceTable';
-import QuickFireQA from './QuickFireQA';
-import Tooltip from './Tooltip';
+import * as Icons from './Icons.tsx';
+import InfluenceTable from './InfluenceTable.tsx';
+import QuickFireQA from './QuickFireQA.tsx';
+import Tooltip from './Tooltip.tsx';
 
 const ContextView = () => {
     const { title, historical, cultural, controversy, engagement } = SANTIAGO_CONTENT.CONTEXT;

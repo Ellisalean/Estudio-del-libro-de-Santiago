@@ -1,4 +1,4 @@
-import { CheckCircleIcon, XCircleIcon } from './Icons';
+import { CheckCircleIcon, XCircleIcon } from './Icons.tsx';
 
 interface InfluenceTableProps {
     influences: {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as Icons from './Icons';
+import * as Icons from './Icons.tsx';
 
 interface QuickFireQAProps {
     question: string;

@@ -1,12 +1,12 @@
 import { SectionId } from '../constants.tsx';
-import AuthorView from './AuthorView';
-import ContributionView from './ContributionView';
-import ContextView from './ContextView';
-import IntroView from './IntroView';
-import PurposeView from './PurposeView';
-import StructureView from './StructureView';
-import StyleView from './StyleView';
-import Trivia from './Trivia';
+import AuthorView from './AuthorView.tsx';
+import ContributionView from './ContributionView.tsx';
+import ContextView from './ContextView.tsx';
+import IntroView from './IntroView.tsx';
+import PurposeView from './PurposeView.tsx';
+import StructureView from './StructureView.tsx';
+import StyleView from './StyleView.tsx';
+import Trivia from './Trivia.tsx';
 
 
 interface MainContentProps {

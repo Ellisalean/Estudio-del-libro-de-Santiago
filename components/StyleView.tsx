@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { SANTIAGO_CONTENT } from '../constants.tsx';
-import Tabs from './Tabs';
-import GenreComparisonTable from './GenreComparisonTable';
-import HighlightCarousel from './HighlightCarousel';
-import TechniqueCard from './TechniqueCard';
-import InfluenceDiagram from './InfluenceDiagram';
+import Tabs from './Tabs.tsx';
+import GenreComparisonTable from './GenreComparisonTable.tsx';
+import HighlightCarousel from './HighlightCarousel.tsx';
+import TechniqueCard from './TechniqueCard.tsx';
+import InfluenceDiagram from './InfluenceDiagram.tsx';
 
 const StyleView = () => {
     const [activeTab, setActiveTab] = useState('definition');

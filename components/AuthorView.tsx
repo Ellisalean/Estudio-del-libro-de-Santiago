@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { SANTIAGO_CONTENT } from '../constants.tsx';
-import * as Icons from './Icons';
-import Tabs from './Tabs';
-import Timeline from './Timeline';
-import Tooltip from './Tooltip';
-import Carousel from './Carousel';
+import * as Icons from './Icons.tsx';
+import Tabs from './Tabs.tsx';
+import Timeline from './Timeline.tsx';
+import Tooltip from './Tooltip.tsx';
+import Carousel from './Carousel.tsx';
 
 const AuthorView = () => {
     const [activeTab, setActiveTab] = useState('biography');

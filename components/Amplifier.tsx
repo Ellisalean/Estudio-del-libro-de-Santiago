@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { generateAmplifiedText } from '../services/geminiService';
-import * as Icons from './Icons';
+import { generateAmplifiedText } from '../services/geminiService.ts';
+import * as Icons from './Icons.tsx';
 
 interface AmplifierProps {
     topic: string;

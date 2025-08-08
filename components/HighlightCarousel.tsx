@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from './Icons';
-import Tooltip from './Tooltip';
+import { ChevronLeftIcon, ChevronRightIcon } from './Icons.tsx';
+import Tooltip from './Tooltip.tsx';
 
 interface CarouselItem {
     fragment: string;

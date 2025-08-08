@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import * as Icons from './Icons';
-import { generateTriviaQuestion } from '../services/geminiService';
-import { TriviaQuestion } from '../types';
+import * as Icons from './Icons.tsx';
+import { generateTriviaQuestion } from '../services/geminiService.ts';
+import { TriviaQuestion } from '../types.ts';
 
 const Trivia = () => {
     const [trivia, setTrivia] = useState<TriviaQuestion | null>(null);

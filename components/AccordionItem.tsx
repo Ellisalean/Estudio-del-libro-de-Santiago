@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDownIcon } from './Icons';
+import { ChevronDownIcon } from './Icons.tsx';
 
 interface AccordionItemProps {
     title: string;

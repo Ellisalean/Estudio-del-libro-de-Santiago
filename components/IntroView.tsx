@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { SANTIAGO_CONTENT } from '../constants.tsx';
-import * as Icons from './Icons';
-import AccordionItem from './AccordionItem';
-import Amplifier from './Amplifier';
-import QuickFireQA from './QuickFireQA';
+import * as Icons from './Icons.tsx';
+import AccordionItem from './AccordionItem.tsx';
+import Amplifier from './Amplifier.tsx';
+import QuickFireQA from './QuickFireQA.tsx';
 
 const IntroView = () => {
     const [openAccordion, setOpenAccordion] = useState<number | null>(0);

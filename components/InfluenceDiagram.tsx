@@ -1,4 +1,4 @@
-import { ArrowsRightLeftIcon, PuzzlePieceIcon } from './Icons';
+import { ArrowsRightLeftIcon, PuzzlePieceIcon } from './Icons.tsx';
 
 interface InfluenceDiagramProps {
     influencedBy: {

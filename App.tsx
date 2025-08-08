@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import MainContent from './components/MainContent';
+import Sidebar from './components/Sidebar.tsx';
+import MainContent from './components/MainContent.tsx';
 import { SectionId } from './constants.tsx';
 
 function App() {

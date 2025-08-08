@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LightBulbIcon } from './Icons';
+import { LightBulbIcon } from './Icons.tsx';
 
 interface Technique {
     name: string;

@@ -1,5 +1,5 @@
 import { SANTIAGO_CONTENT } from '../constants.tsx';
-import * as Icons from './Icons';
+import * as Icons from './Icons.tsx';
 
 const ContributionView = () => {
     const { title, intro, comparison, keyContributions, relevance } = SANTIAGO_CONTENT.CONTRIBUTION;
