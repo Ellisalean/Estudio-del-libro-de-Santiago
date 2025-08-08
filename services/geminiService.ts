@@ -1,7 +1,20 @@
 import { GoogleGenAI, Type } from "@google/genai";
-import { TriviaQuestion } from "../types";
+import type { TriviaQuestion } from "../types.ts";
+import { API_KEY } from '../config.ts';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+let ai: GoogleGenAI | null = null;
+
+const getAIClient = (): GoogleGenAI => {
+    if (!API_KEY || API_KEY === "PEGA_AQUÍ_TU_API_KEY_DE_GOOGLE") {
+        throw new Error("API Key de Google no configurada. Edita el archivo 'config.ts' y pega tu clave para activar las funciones de IA.");
+    }
+
+    if (!ai) {
+        ai = new GoogleGenAI({ apiKey: API_KEY });
+    }
+    return ai;
+};
+
 
 const triviaSchema = {
     type: Type.OBJECT,
@@ -16,8 +29,9 @@ const triviaSchema = {
 
 export const generateTriviaQuestion = async (): Promise<TriviaQuestion> => {
     try {
+        const client = getAIClient();
         const prompt = "Genera una pregunta de trivia de opción múltiple, desafiante pero justa, sobre el contenido del Libro de Santiago en la Biblia. La pregunta debe estar en español y ser adecuada para alguien que ha estudiado el libro. Proporciona 4 opciones, el índice de la respuesta correcta y una explicación concisa.";
-        const response = await ai.models.generateContent({
+        const response = await client.models.generateContent({
             model: "gemini-2.5-flash",
             contents: prompt,
             config: { responseMimeType: "application/json", responseSchema: triviaSchema, temperature: 1 }
@@ -25,24 +39,27 @@ export const generateTriviaQuestion = async (): Promise<TriviaQuestion> => {
         const jsonText = response.text.trim();
         const parsedJson = JSON.parse(jsonText);
         
-        // Basic validation
         if (!parsedJson.question || !Array.isArray(parsedJson.options) || parsedJson.options.length !== 4 || typeof parsedJson.answerIndex !== 'number' || !parsedJson.explanation) {
             throw new Error("El formato de la respuesta de la IA es inválido.");
         }
         return parsedJson;
     } catch (error) {
         console.error("Error generating trivia question:", error);
+        if (error instanceof Error) {
+            throw error;
+        }
         throw new Error("No se pudo generar la pregunta de trivia. Inténtalo de nuevo.");
     }
 };
 
 export const generateAmplifiedText = async (topic: string, baseText: string): Promise<string> => {
     try {
-        const prompt = `Actúa como un teólogo y erudito bíblico. Tu tarea es ampliar el siguiente texto sobre el Libro de Santiago. Proporciona más detalles, contexto y análisis. Mantén un tono didáctico, claro y respetuoso. La respuesta debe estar en español y formateada en HTML simple (usa <b> para negrita y <p> para párrafos).
+        const client = getAIClient();
+        const prompt = `Actúa como un teólogo y erudito bíblico. Tu tarea es ampliar el siguiente texto sobre el Libro de Santiago. Proporciona más detalles, contexto y análisis. Mantén un tono didáctico, claro y respetuoso. La respuesta debe estar en español y formateada en HTML simple (usa <strong> para negrita y <p> para párrafos).
         Tema: "${topic}"
         Texto base a ampliar: "${baseText}"
         Por favor, elabora sobre los puntos clave del texto base, ofreciendo una perspectiva más profunda.`;
-        const response = await ai.models.generateContent({
+        const response = await client.models.generateContent({
             model: "gemini-2.5-flash",
             contents: prompt,
             config: { temperature: 0.7 }
@@ -50,6 +67,9 @@ export const generateAmplifiedText = async (topic: string, baseText: string): Pr
         return response.text;
     } catch (error) {
         console.error("Error generating amplified text:", error);
+         if (error instanceof Error) {
+            throw error;
+        }
         throw new Error("No se pudo ampliar la información. Inténtalo de nuevo.");
     }
 };

@@ -5,6 +5,7 @@ import GenreComparisonTable from './GenreComparisonTable.tsx';
 import HighlightCarousel from './HighlightCarousel.tsx';
 import TechniqueCard from './TechniqueCard.tsx';
 import InfluenceDiagram from './InfluenceDiagram.tsx';
+import Tooltip from './Tooltip.tsx';
 
 const StyleView = () => {
     const [activeTab, setActiveTab] = useState('definition');
@@ -16,7 +17,9 @@ const StyleView = () => {
                 const defContent = content.definition;
                 return (
                     <div className="space-y-6">
-                        <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: defContent.definition }} />
+                        <p className="text-gray-600 leading-relaxed">
+                            <Tooltip text={defContent.definition} />
+                        </p>
                         <GenreComparisonTable data={defContent.comparison} />
                     </div>
                 );
@@ -49,7 +52,9 @@ const StyleView = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="space-y-4">
                         <h3 className="text-xl font-semibold text-gray-700">Lenguaje y Tono</h3>
-                        <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: exContent.traits.language }} />
+                        <p className="text-gray-600 leading-relaxed">
+                            <Tooltip text={exContent.traits.language} />
+                        </p>
                     </div>
                      <div className="space-y-4">
                          <h3 className="text-xl font-semibold text-gray-700">{exContent.traits.motifs.title}</h3>

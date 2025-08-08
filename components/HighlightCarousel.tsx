@@ -19,11 +19,6 @@ const HighlightCarousel = ({ data }: HighlightCarouselProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const items = data.items;
 
-    const createMarkup = (htmlContent: string) => {
-        const processedHtml = htmlContent.replace(/<mark>/g, '<mark class="bg-orange-200 text-orange-800 font-bold px-1 rounded">');
-        return <Tooltip text={processedHtml} />;
-    };
-
     const prevSlide = () => setCurrentIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
     const nextSlide = () => setCurrentIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
 
@@ -39,10 +34,12 @@ const HighlightCarousel = ({ data }: HighlightCarouselProps) => {
                             style={{ transitionProperty: 'opacity' }}
                         >
                             <blockquote className="text-lg italic text-gray-700 leading-relaxed border-l-4 border-orange-400 pl-4 mb-4">
-                                {createMarkup(item.fragment)}
+                                <Tooltip text={item.fragment} />
                             </blockquote>
                             <cite className="block text-right not-italic font-semibold text-gray-500 mb-4">{item.citation}</cite>
-                            <p className="text-sm text-gray-600">{createMarkup(item.analysis)}</p>
+                            <p className="text-sm text-gray-600">
+                                <Tooltip text={item.analysis} />
+                            </p>
                         </div>
                     ))}
                 </div>
