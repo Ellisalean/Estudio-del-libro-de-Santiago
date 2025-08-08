@@ -1,0 +1,6 @@
+{
+  "name": "Estudio del Libro de Santiago",
+  "description": "Una aplicación web interactiva para estudiar el Libro de Santiago de la Biblia, construida con React y TypeScript. Incluye explicaciones detalladas y una trivia generada por IA para poner a prueba los conocimientos.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
