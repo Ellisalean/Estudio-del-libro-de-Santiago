@@ -16,13 +16,13 @@ const Sidebar = ({ activeSection, setActiveSection }: SidebarProps) => {
 
   return (
     <aside className="w-64 bg-[#1A202C] text-gray-300 flex flex-col p-4 shadow-2xl shrink-0">
-      <div className="flex items-center gap-3 p-2 mb-6">
+      <div className="flex items-center gap-3 p-2 mb-6 shrink-0">
         <div className="p-2 bg-[#F76A6A] rounded-lg">
           <TopIcon className="w-7 h-7 text-white" />
         </div>
         <h1 className="text-xl font-bold text-white">Libro de Santiago</h1>
       </div>
-      <nav className="flex-1">
+      <nav className="flex-grow min-h-0 overflow-y-auto -mr-2 pr-2">
         <ul>
           {sectionsData.map(section => {
             const SectionIcon = section.icon;
@@ -44,7 +44,7 @@ const Sidebar = ({ activeSection, setActiveSection }: SidebarProps) => {
           })}
         </ul>
       </nav>
-      <div className="p-4 bg-gray-700/50 rounded-lg text-center">
+      <div className="mt-auto p-4 bg-gray-700/50 rounded-lg text-center shrink-0">
         <h3 className="font-bold text-white">Fe y Obras</h3>
         <p className="text-sm mt-1 text-gray-400">Una guía práctica para una fe viva y auténtica.</p>
       </div>

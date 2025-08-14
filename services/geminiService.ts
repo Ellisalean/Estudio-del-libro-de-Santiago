@@ -1,16 +1,15 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import type { TriviaQuestion } from "../types.ts";
-import { API_KEY } from '../config.ts';
 
 let ai: GoogleGenAI | null = null;
 
 const getAIClient = (): GoogleGenAI => {
-    if (!API_KEY || API_KEY === "PEGA_AQUÍ_TU_API_KEY_DE_GOOGLE") {
-        throw new Error("API Key de Google no configurada. Edita el archivo 'config.ts' y pega tu clave para activar las funciones de IA.");
+    if (!process.env.API_KEY) {
+        throw new Error("API Key de Google no configurada. Por favor, asegúrese de que la variable de entorno API_KEY esté definida para usar las funciones de IA.");
     }
 
     if (!ai) {
-        ai = new GoogleGenAI({ apiKey: API_KEY });
+        ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     }
     return ai;
 };
