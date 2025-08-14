@@ -272,5 +272,64 @@ export const SANTIAGO_CONTENT = {
             text: "En una era de 'influencers' y apariencias, Santiago nos llama a una autenticidad radical. Nos pregunta: ¿Tu fe se queda en tus redes sociales y conversaciones, o se traduce en cómo tratas al inmigrante, al pobre y al que piensa diferente? Su mensaje es un antídoto poderoso contra un cristianismo superficial y nominal.",
             quote: "¿De qué sirve, hermanos míos, si alguno dice que tiene fe, y no tiene obras? ¿Podrá la fe salvarle?"
         }
+    },
+    TRIVIA_STATIC: {
+        triviaQuestions: [
+            {
+                question: 'Según Santiago, ¿qué es la "religión pura y sin mácula"?',
+                options: [
+                    "Asistir a la sinagoga regularmente",
+                    "Guardar estrictamente la ley de Moisés",
+                    "Visitar a los huérfanos y a las viudas en sus tribulaciones",
+                    "Ofrecer sacrificios y ofrendas"
+                ],
+                answerIndex: 2,
+                explanation: 'Santiago 1:27 dice: "La religión pura y sin mácula delante de Dios el Padre es esta: Visitar a los huérfanos y a las viudas en sus tribulaciones, y guardarse sin mancha del mundo."'
+            },
+            {
+                question: '¿Con qué compara Santiago la lengua para ilustrar su poder destructivo?',
+                options: [
+                    "Con una espada de doble filo",
+                    "Con un pequeño fuego que incendia un gran bosque",
+                    "Con un león rugiente buscando a quien devorar",
+                    "Con una tormenta repentina en el mar"
+                ],
+                answerIndex: 1,
+                explanation: 'En Santiago 3:5-6, la lengua se compara con un pequeño fuego que puede causar una destrucción masiva, mostrando su poder para el mal cuando no se controla.'
+            },
+            {
+                question: '¿Cuál es la declaración más famosa de Santiago sobre la relación entre la fe y las obras?',
+                options: [
+                    '"La fe tiene el poder de mover montañas"',
+                    '"Las buenas obras son el fruto de una fe verdadera"',
+                    '"La fe, si no tiene obras, es muerta en sí misma"',
+                    '"Porque por gracia sois salvos por medio de la fe"'
+                ],
+                answerIndex: 2,
+                explanation: 'Santiago 2:17 resume su argumento principal: "Así también la fe, si no tiene obras, es muerta en sí misma", enfatizando que la fe genuina siempre se manifiesta en acciones concretas.'
+            },
+            {
+                question: '¿A quiénes se dirige principalmente la epístola de Santiago en su saludo inicial?',
+                options: [
+                    "A los creyentes gentiles en la ciudad de Roma",
+                    "A las iglesias de la región de Galacia",
+                    "A las doce tribus que están en la dispersión",
+                    "A los santos que están en Corinto"
+                ],
+                answerIndex: 2,
+                explanation: 'Santiago 1:1 comienza con el saludo: "Santiago, siervo de Dios y del Señor Jesucristo, a las doce tribus que están en la dispersión: Salud."'
+            },
+            {
+                question: '¿Qué consejo práctico da Santiago a aquel que está falto de sabiduría?',
+                options: [
+                    "Que estudie las escrituras diligentemente día y noche",
+                    "Que la pida a Dios, quien da a todos abundantemente y sin reproche",
+                    "Que busque el consejo de los ancianos más sabios de la iglesia",
+                    "Que medite en la ley para encontrar la guía divina"
+                ],
+                answerIndex: 1,
+                explanation: 'Santiago 1:5 anima: "Y si alguno de vosotros tiene falta de sabiduría, pídala a Dios, el cual da a todos abundantemente y sin reproche, y le será dada."'
+            }
+        ]
     }
 };
