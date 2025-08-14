@@ -1,14 +1,16 @@
 // -----------------------------------------------------------------------------
-// --- INSTRUCCIONES IMPORTANTES ---
+// --- ARCHIVO OBSOLETO ---
 // -----------------------------------------------------------------------------
-// Para que las funciones de Inteligencia Artificial (Trivia y Ampliar Información) 
-// funcionen, debes pegar tu API Key de Google aquí.
-// 
-// 1. Obtén tu API Key desde Google AI Studio: https://aistudio.google.com/app/apikey
-// 2. Reemplaza la cadena de texto "PEGA_AQUÍ_TU_API_KEY_DE_GOOGLE" con tu clave.
-// 
-// Ejemplo:
-// export const API_KEY = "AIzaSy...xxxxxxxxxxxx";
+// Este archivo ya no se utiliza y será eliminado en futuras versiones.
+// La clave de API de Google ahora se debe configurar como una variable de 
+// entorno llamada `API_KEY`.
+//
+// NO PEGUE SU CLAVE DE API AQUÍ.
+//
+// Por razones de seguridad, la aplicación ha sido actualizada para leer la 
+// clave de API desde el entorno del sistema, que es una práctica mucho más
+// segura y recomendada.
 // -----------------------------------------------------------------------------
 
-export const API_KEY = "PEGA_AQUÍ_TU_API_KEY_DE_GOOGLE";
+// La siguiente línea no tiene efecto en la aplicación.
+export const API_KEY = "NO_USAR_ESTE_ARCHIVO_CONFIGURAR_API_KEY_COMO_VARIABLE_DE_ENTORNO";
