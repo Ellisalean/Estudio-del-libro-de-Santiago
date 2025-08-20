@@ -8,6 +8,8 @@ export const SectionId = {
     STYLE: 'STYLE',
     STRUCTURE: 'STRUCTURE',
     CONTRIBUTION: 'CONTRIBUTION',
+    CHAPTER_1: 'CHAPTER_1',
+    CHAPTER_2: 'CHAPTER_2',
     TRIVIA: 'TRIVIA'
 };
 
@@ -19,8 +21,223 @@ export const sectionsData = [
     { id: SectionId.STYLE, title: 'Estilo', icon: Icons.FeatherIcon },
     { id: SectionId.STRUCTURE, title: 'Estructura', icon: Icons.PuzzlePieceIcon },
     { id: SectionId.CONTRIBUTION, title: 'Aportación', icon: Icons.BookOpenIcon },
+    { id: SectionId.CHAPTER_1, title: 'Capítulo 1: Estudio', icon: Icons.AcademicCapIcon },
+    { id: SectionId.CHAPTER_2, title: 'Capítulo 2: Estudio', icon: Icons.GavelIcon },
     { id: SectionId.TRIVIA, title: 'Trivia IA', icon: Icons.QuestionMarkCircleIcon }
 ];
+
+export const SANTIAGO_CHAPTER_1 = {
+    header: {
+        title: "La Epístola de Santiago: Capítulo 1",
+        subtitle: "La fe puesta a prueba y en acción",
+        description: "El primer capítulo de la Epístola de Santiago establece los cimientos para el resto del libro, abordando temas cruciales como la perseverancia en las pruebas, la búsqueda de la sabiduría divina, la naturaleza de la tentación y la importancia de que la fe se manifieste en acciones prácticas. El autor, Santiago, busca que sus lectores no solo oigan la Palabra de Dios, sino que la hagan vida."
+    },
+    section1: {
+        title: "El Saludo y los Destinatarios",
+        verse: "Santiago 1:1",
+        accordionItems: [
+            {
+                title: "¿Quién es Santiago?",
+                content: "La carta es atribuida a Santiago, el hermano de Jesús (también conocido como Jacobo el Justo). Aunque no fue uno de los doce apóstoles, se convirtió en una figura de gran importancia y líder de la primera iglesia en Jerusalén, siendo descrito por Pablo como uno de los 'pilares' de la Iglesia. Se presenta con humildad como un 'siervo de Dios y del Señor Jesucristo'."
+            },
+            {
+                title: "¿Quiénes son los Destinatarios?",
+                content: "La epístola está dirigida a 'las doce tribus que están en la dispersión' (la diáspora). Esto se refiere a las comunidades judeocristianas que vivían fuera de Palestina, esparcidas por varias regiones. Su propósito era instruir y animar a los creyentes en la fe cristiana."
+            },
+            {
+                title: "Nota del Erudito",
+                content: "Algunos estudiosos sugieren que el estilo del griego culto de la epístola, y su aceptación gradual en el canon del Nuevo Testamento, podrían indicar una autoría posterior, o que la carta fue pulida por otro escritor. Sin embargo, la tradición mayoritaria la atribuye al hermano de Jesús."
+            }
+        ],
+        debate: {
+            title: "Pregunta para Debatir",
+            question: "¿Por qué crees que Santiago eligió dirigirse a 'las doce tribus' si su audiencia eran cristianos? ¿Qué implicaciones tiene esto sobre la identidad de la iglesia primitiva?"
+        }
+    },
+    section2: {
+        title: "El Valor de las Pruebas y la Sabiduría",
+        verse: "Santiago 1:2-18",
+        timeline: {
+            title: "El Propósito Divino de las Pruebas (1:2-4)",
+            steps: [
+                { icon: Icons.SparklesIcon, title: "Pruebas Diversas", description: "El punto de partida: dificultades externas que ponen a prueba la fe." },
+                { icon: Icons.Cog8ToothIcon, title: "Prueba de la Fe", description: "Este proceso refina y fortalece la creencia genuina." },
+                { icon: Icons.AnchorIcon, title: "Produce Paciencia", description: "La perseverancia se desarrolla como resultado de resistir las pruebas." },
+                { icon: Icons.CheckCircleIcon, title: "Conduce a la Madurez", description: "El objetivo final: ser 'perfectos y cabales', completos en el carácter." }
+            ]
+        },
+        flipCards: [
+            {
+                front: { icon: Icons.LightBulbIcon, title: "La Sabiduría de Dios", subtitle: "Santiago 1:5-8" },
+                back: {
+                    title: "Un Don Divino",
+                    content: "Reconociendo que ver las pruebas con gozo requiere una sabiduría especial, Santiago insta a sus lectores a pedirla a Dios, quien la da generosamente. Es crucial pedir con fe, 'no dudando nada', ya que una persona de 'doble ánimo' es inestable e inconstante."
+                }
+            },
+            {
+                front: { icon: Icons.ScaleIcon, title: "Pobreza y Riqueza", subtitle: "Santiago 1:9-11" },
+                back: {
+                    title: "Una Perspectiva Eterna",
+                    content: "Santiago enfatiza la fugacidad de las riquezas materiales, comparándolas con la flor que se marchita. El hermano humilde debe gloriarse en su exaltación espiritual y el rico en su humillación, reconociendo el verdadero valor."
+                }
+            }
+        ],
+        dragDrop: {
+            title: "El Origen de la Tentación (1:12-18)",
+            instruction: "Arrastra cada 'Fuente' a su 'Resultado' correcto para entender la enseñanza de Santiago.",
+            sources: [
+                { id: 'source-1', text: 'Malos Deseos (Concupiscencia)' },
+                { id: 'source-2', text: 'Dios' }
+            ],
+            targets: [
+                { id: 'target-1', accepts: 'source-1', label: 'Resultado de la Concupiscencia', text: 'Da a luz el Pecado, que lleva a la Muerte.' },
+                { id: 'target-2', accepts: 'source-2', label: 'Resultado de Dios', text: 'Fuente de toda buena dádiva y don perfecto.' }
+            ]
+        }
+    },
+    section3: {
+        title: "Oyentes y Hacedores de la Palabra",
+        verse: "Santiago 1:19-27",
+        comparison: {
+            title: "Instrucciones Prácticas (1:19-20)",
+            dos: { title: "Lo que Debemos Hacer", items: ["Ser prontos para oír", "Recibir la palabra con mansedumbre", "Ser hacedores de la palabra"], icon: Icons.CheckCircleIcon, color: "green" },
+            donts: { title: "Lo que Debemos Evitar", items: ["Ser tardos para hablar", "Ser tardos para airarse", "Ser solamente oidores olvidadizos"], icon: Icons.XCircleIcon, color: "red" }
+        },
+        analogy: {
+            title: "La Analogía del Espejo (1:21-25)",
+            description: "El que solo oye pero no practica, se engaña a sí mismo. Es como una persona que se mira en un espejo y luego olvida cómo era su rostro. La bendición viene al mirar 'atentamente en la perfecta ley de la libertad' y perseverar en ella.",
+            imageUrl: "https://cdn.myportfolio.com/d435fa58-d32c-4141-8a15-0f2bfccdea41/b9f9faf6-8c9b-4149-86aa-8add6899f787_rw_1920.png?h=b6fbe1a79fc64bdfdab9e3d6020b44c0"
+        },
+        trivia: {
+            question: 'Según Santiago 1:27, ¿cuáles son los dos componentes clave de la "religión pura y sin mácula"?',
+            options: [
+                "Orar constantemente y ayunar dos veces por semana.",
+                "Cuidar a los vulnerables (huérfanos y viudas) y mantenerse puro del mundo.",
+                "Asistir a la iglesia cada semana y dar el diezmo.",
+                "Refrenar la lengua y estudiar las escrituras diariamente."
+            ],
+            answerIndex: 1,
+            explanation: "Santiago 1:27 define explícitamente la religión auténtica con estas dos acciones: el amor práctico hacia los necesitados y la santidad personal."
+        }
+    }
+};
+
+export const SANTIAGO_CHAPTER_2 = {
+    header: {
+        title: "La Epístola de Santiago: Capítulo 2",
+        subtitle: "Fe sin Favoritismo, Fe con Obras",
+        description: "El capítulo 2 es una de las secciones más directas y confrontadoras de la Biblia. Santiago aborda dos pruebas cruciales de una fe genuina: cómo tratamos a los demás, especialmente a los pobres (la prueba social), y qué produce nuestra fe en términos de acciones concretas (la prueba práctica). Este capítulo nos obliga a mirar más allá de nuestras palabras y examinar la verdadera naturaleza de nuestra devoción.",
+        keyVerse: {
+            citation: "Santiago 2:26",
+            text: "Porque como el cuerpo sin espíritu está muerto, así también la fe sin obras está muerta."
+        }
+    },
+    section1: {
+        title: "Análisis del Texto: El Pecado de la Parcialidad",
+        verse: "Santiago 2:1-13",
+        scenario: {
+            title: "El Escenario en la Asamblea",
+            description: "Santiago presenta una situación hipotética para exponer el favoritismo. Imagina esta escena en tu comunidad:",
+            visitor1: {
+                name: "Visitante Próspero",
+                description: "Un hombre con anillo de oro y ropa espléndida.",
+                imageUrl: "https://cdn.myportfolio.com/d435fa58-d32c-4141-8a15-0f2bfccdea41/c873a4b6-0e1d-4054-913a-44287c9569b9_rw_1920.png?h=61901a18205f33e73456c28f11d13f57"
+            },
+            visitor2: {
+                name: "Visitante Humilde",
+                description: "Un pobre con vestido andrajoso.",
+                imageUrl: "https://cdn.myportfolio.com/d435fa58-d32c-4141-8a15-0f2bfccdea41/89aa841d-d2f1-460d-855f-8c3d9a16f9f0_rw_1920.png?h=3e7287714909a3498d785724131b7959"
+            }
+        },
+        analysis: {
+            title: "El Veredicto de Santiago",
+            text: "Al dar preferencia al rico, no solo deshonran al pobre, sino que actúan como 'jueces con malos pensamientos' (v. 4). Están juzgando por apariencias, un estándar del mundo, no del Reino. Esto es una contradicción directa a la fe en un Señor glorioso que se identificó con los humildes."
+        }
+    },
+    section2: {
+        title: "Análisis del Texto: Fe y Obras",
+        verse: "Santiago 2:14-26",
+        comparison: {
+            title: "Fe Viva vs. Fe Muerta",
+            living: {
+                title: "Fe Viva (Genuina)",
+                icon: Icons.HeartIcon,
+                points: [
+                    "Se demuestra con acciones.",
+                    "Es práctica y compasiva.",
+                    "Produce transformación.",
+                    "Es la fe de Abraham y Rahab."
+                ]
+            },
+            dead: {
+                title: "Fe Muerta (Inútil)",
+                icon: Icons.Cog8ToothIcon,
+                points: [
+                    "Es solo una confesión verbal.",
+                    "Es pasiva e indiferente.",
+                    "No tiene poder para salvar.",
+                    "Es la 'fe' de los demonios (creen y tiemblan)."
+                ]
+            }
+        },
+        examples: {
+            title: "Ejemplos Bíblicos de Fe Viva",
+            cards: [
+                {
+                    front: { icon: Icons.UserIcon, title: "Abraham", subtitle: "El Padre de la Fe" },
+                    back: { title: "Fe Probada por Obras", content: "La fe de Abraham fue contada por justicia (Gén. 15), pero fue perfeccionada y demostrada como genuina cuando ofreció a Isaac (Gén. 22). Su obediencia fue el fruto visible de su fe invisible." }
+                },
+                {
+                    front: { icon: Icons.HomeIcon, title: "Rahab", subtitle: "La Posadera de Jericó" },
+                    back: { title: "Fe Demostrada en Acción", content: "Rahab no fue justificada solo por creer en el Dios de Israel, sino porque actuó sobre esa creencia, arriesgando su vida para proteger a los espías. Sus obras fueron la evidencia de su fe." }
+                }
+            ]
+        }
+    },
+    section3: {
+        title: "Conceptos Clave y Aplicación Práctica",
+        glossary: {
+            title: "Glosario de Términos Importantes",
+            terms: [
+                { title: "Acepción de Personas (Parcialidad)", content: "Del griego 'prosopolempsia', significa literalmente 'recibir el rostro'. Se refiere a juzgar o tratar a alguien basándose en su apariencia externa, estatus social, riqueza o poder, en lugar de su valor intrínseco como persona." },
+                { title: "La Ley Real", content: "Santiago se refiere al mandamiento de 'Amarás a tu prójimo como a ti mismo' (Levítico 19:18). La llama 'real' porque es la ley del Rey (Jesús) y resume el corazón de toda la ley moral. Cumplir esta ley es el antídoto contra el favoritismo." },
+                { title: "Fe Muerta", content: "No se refiere a la ausencia de fe, sino a una fe que es inútil e inoperante. Es un asentimiento puramente intelectual a una verdad teológica que no produce ningún cambio en el comportamiento, la compasión o las acciones de una persona." }
+            ]
+        },
+        application: {
+            title: "Aplicación para la Vida Actual",
+            points: [
+                "**Auditoría de Parcialidad:** Examina tus propias actitudes. ¿A quién admiras más? ¿A quién invitas a tu casa? ¿Cómo tratas al personal de servicio en comparación con un ejecutivo? La 'ley real' nos llama a ver a todos con los ojos de Cristo.",
+                "**Fe en Acción:** No te preguntes '¿Tengo fe?', sino '¿Qué está haciendo mi fe?'. Elige una forma práctica esta semana de servir a alguien en necesidad, no como un medio para ganar la salvación, sino como una expresión de la salvación que ya tienes.",
+                "**Coherencia Integral:** El mensaje de Santiago es un llamado a la integridad. Que no haya desconexión entre tu devoción del domingo y tu comportamiento del lunes. Tu fe debe ser visible en tu ética de trabajo, en cómo hablas y en cómo usas tus recursos."
+            ]
+        }
+    },
+    trivia: {
+        title: "Prueba tu Conocimiento",
+        questions: [
+            {
+                question: 'Santiago advierte que si muestras favoritismo, te conviertes en...',
+                options: ["Un mal anfitrión", "Un fariseo moderno", "Juez con malos pensamientos", "Una persona imprudente"],
+                answerIndex: 2,
+                explanation: 'En Santiago 2:4, él dice: "¿no hacéis distinciones entre vosotros mismos, y venís a ser jueces con malos pensamientos?"'
+            },
+            {
+                question: 'Según Santiago 2:19, ¿quiénes también "creen" que Dios es uno, y tiemblan?',
+                options: ["Los ángeles", "Los profetas del Antiguo Testamento", "Los demonios", "Los apóstoles"],
+                answerIndex: 2,
+                explanation: "Santiago usa este ejemplo para mostrar que la creencia intelectual por sí sola no es fe salvadora, ya que incluso los demonios tienen una doctrina correcta pero no son salvos."
+            },
+            {
+                question: "Al cumplir la 'ley real' de amar al prójimo, Santiago dice que...",
+                options: ["Ganas el favor de Dios", "Haces bien", "Te conviertes en un buen ciudadano", "Eres perfecto"],
+                answerIndex: 1,
+                explanation: 'Santiago 2:8 dice: "Si en verdad cumplís la ley real, conforme a la Escritura: Amarás a tu prójimo como a ti mismo, bien hacéis."'
+            }
+        ]
+    }
+};
+
 
 export const SANTIAGO_CONTENT = {
     INTRO: {
