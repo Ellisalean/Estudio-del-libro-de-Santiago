@@ -83,15 +83,21 @@ export const SANTIAGO_CHAPTER_1 = {
             }
         ],
         dragDrop: {
-            title: "El Origen de la Tentación (1:12-18)",
+            title: "El Origen de la Tentación y la Promesa Divina (1:12-18)",
             instruction: "Arrastra cada 'Fuente' a su 'Resultado' correcto para entender la enseñanza de Santiago.",
             sources: [
-                { id: 'source-1', text: 'Malos Deseos (Concupiscencia)' },
-                { id: 'source-2', text: 'Dios' }
+                { id: 'source-4', text: 'Dios (El Padre de las luces)' },
+                { id: 'source-2', text: 'Malos Deseos (Concupiscencia)' },
+                { id: 'source-5', text: 'La Palabra de Verdad' },
+                { id: 'source-1', text: 'Perseverancia en la prueba' },
+                { id: 'source-3', text: 'Pecado (una vez consumado)' },
             ],
             targets: [
-                { id: 'target-1', accepts: 'source-1', label: 'Resultado de la Concupiscencia', text: 'Da a luz el Pecado, que lleva a la Muerte.' },
-                { id: 'target-2', accepts: 'source-2', label: 'Resultado de Dios', text: 'Fuente de toda buena dádiva y don perfecto.' }
+                { id: 'target-1', accepts: 'source-1', label: 'Resultado de la Perseverancia', text: 'Recibe la corona de la vida.' },
+                { id: 'target-2', accepts: 'source-2', label: 'Resultado de la Concupiscencia', text: 'Arrastra y seduce a la tentación.' },
+                { id: 'target-3', accepts: 'source-3', label: 'Resultado del Pecado', text: 'Da a luz la Muerte.' },
+                { id: 'target-4', accepts: 'source-4', label: 'Resultado de Dios', text: 'Fuente de toda buena dádiva y don perfecto.' },
+                { id: 'target-5', accepts: 'source-5', label: 'Resultado de la Palabra', text: 'Nos hace nacer como primicias de su creación.' }
             ]
         }
     },
@@ -141,12 +147,12 @@ export const SANTIAGO_CHAPTER_2 = {
             visitor1: {
                 name: "Visitante Próspero",
                 description: "Un hombre con anillo de oro y ropa espléndida.",
-                imageUrl: "https://cdn.myportfolio.com/d435fa58-d32c-4141-8a15-0f2bfccdea41/c873a4b6-0e1d-4054-913a-44287c9569b9_rw_1920.png?h=61901a18205f33e73456c28f11d13f57"
+                imageUrl: "https://www.shutterstock.com/image-photo/man-holding-money-hand-black-260nw-710867164.jpg"
             },
             visitor2: {
                 name: "Visitante Humilde",
                 description: "Un pobre con vestido andrajoso.",
-                imageUrl: "https://cdn.myportfolio.com/d435fa58-d32c-4141-8a15-0f2bfccdea41/89aa841d-d2f1-460d-855f-8c3d9a16f9f0_rw_1920.png?h=3e7287714909a3498d785724131b7959"
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThcLsLUOtTvyTiyXZo_440g-QIcYSXs7hZFA&s"
             }
         },
         analysis: {
@@ -243,7 +249,7 @@ export const SANTIAGO_CONTENT = {
     INTRO: {
         title: "Introducción al Libro de Santiago",
         objective: "Presentar al autor, el contexto histórico, los destinatarios y el propósito central del libro de Santiago, estableciendo las bases para su estudio detallado.",
-        videoUrl: "https://www.youtube.com/watch?v=kzxNQNAs4vE", // Example URL
+        videoUrl: "https://youtu.be/CixYzLVKj6I", // Example URL
         alternatingSections: [
             {
                 title: "Una Fe Práctica y Sin Hipocresía",
@@ -412,7 +418,7 @@ export const SANTIAGO_CONTENT = {
                     title: "Rasgos del Estilo",
                     language: "El lenguaje de Santiago es <strong>vívido, concreto y lleno de imágenes</strong> extraídas de la naturaleza y la vida cotidiana. Evita la complejidad teológica abstracta en favor de un griego claro y contundente, caracterizado por su abundancia de verbos en imperativo (mandatos).",
                     motifs: {
-                        title: "Símbolos y Motivos Recurrentes",
+                        title: "Símbolos y Motivos Recorrentes",
                         items: [
                             { symbol: "El Espejo", meaning: "La Palabra de Dios como herramienta de autoexamen que exige acción." },
                             { symbol: "El Freno y el Timón", meaning: "Pequeños elementos que dirigen algo mucho más grande, usados como metáfora del poder de la lengua." },
