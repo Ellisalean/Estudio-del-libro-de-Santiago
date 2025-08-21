@@ -113,3 +113,5 @@ const IntroView = () => {
         </div>
     );
 };
+
+export default IntroView;
