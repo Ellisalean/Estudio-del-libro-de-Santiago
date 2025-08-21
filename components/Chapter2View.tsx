@@ -1,10 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SANTIAGO_CHAPTER_2 } from '../constants.tsx';
 import * as Icons from './Icons.tsx';
 import AccordionItem from './AccordionItem.tsx';
 import FlipCard from './FlipCard.tsx';
 import StaticTriviaCard from './StaticTriviaCard.tsx';
 import Amplifier from './Amplifier.tsx';
+
+declare global {
+    interface Window {
+        mermaid: any;
+    }
+}
 
 const SectionCard = ({ title, verse, children }: { title: string, verse: string, children: React.ReactNode }) => (
     <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100">
@@ -20,6 +26,51 @@ const Chapter2View = () => {
     const [openGlossary, setOpenGlossary] = useState<number | null>(null);
     const { header, section1, section2, section3, trivia } = SANTIAGO_CHAPTER_2;
 
+    useEffect(() => {
+        if (window.mermaid) {
+            try {
+                window.mermaid.initialize({
+                    startOnLoad: false,
+                    theme: 'base',
+                    themeVariables: {
+                        lineColor: '#a1a1aa', // neutral gray for arrows
+                    },
+                    flowchart: {
+                        useMaxWidth: false,
+                        htmlLabels: true
+                    }
+                });
+                window.mermaid.run({
+                    nodes: document.querySelectorAll('.mermaid')
+                });
+            } catch (e) {
+                console.error("Error al renderizar el diagrama de Mermaid:", e);
+            }
+        }
+    }, []);
+
+    const flowchart = `
+flowchart TD
+    A["<div style='font-size: 18px; font-weight: bold; padding: 10px; border-radius: 8px;'>Santiago 2</div>"]:::santiago2
+    B["<div style='font-size: 15px; padding: 8px; border-radius: 6px;'>1-13: No al Favoritismo</div>"]:::mainBranch
+    C["<div style='font-size: 15px; padding: 8px; border-radius: 6px;'>14-26: Fe sin obras está muerta</div>"]:::mainBranch
+
+    A --> B
+    A --> C
+
+    B --> B1["<div style='font-size: 13px; padding: 6px;'>Trato igual a<br>ricos y pobres<br>(vv. 1-4)</div>"]:::subPoint
+    B --> B2["<div style='font-size: 13px; padding: 6px;'>Dios elige a los<br>pobres (vv. 5-7)</div>"]:::subPoint
+    B --> B3["<div style='font-size: 13px; padding: 6px;'>Amar al prójimo =<br>Ley real (vv. 8-13)</div>"]:::subPoint
+
+    C --> C1["<div style='font-size: 13px; padding: 6px;'>Fe sin obras es<br>estéril (vv. 14-17)</div>"]:::subPoint
+    C --> C2["<div style='font-size: 13px; padding: 6px;'>La fe se muestra<br>con obras (vv. 18-19)</div>"]:::subPoint
+    C --> C3["<div style='font-size: 13px; padding: 6px;'>Ejemplos:<br>Abraham y Rahab<br>(vv. 20-26)</div>"]:::subPoint
+
+    classDef santiago2 fill:#1A202C,stroke:#F76A6A,stroke-width:4px,color:#fff;
+    classDef mainBranch fill:#FEF3C7,stroke:#F59E0B,stroke-width:2px,color:#92400E,font-weight:600;
+    classDef subPoint fill:#E0F2FE,stroke:#38BDF8,stroke-width:2px,color:#075985;
+    `;
+
     return (
         <div className="space-y-12">
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 text-white p-8 rounded-2xl shadow-xl text-center">
@@ -32,6 +83,15 @@ const Chapter2View = () => {
                         <p>"{header.keyVerse.text}"</p>
                         <cite className="not-italic font-semibold block mt-1">({header.keyVerse.citation})</cite>
                     </blockquote>
+                </div>
+            </div>
+
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">Esquema Visual del Capítulo</h2>
+                <div className="flex justify-center items-center p-4 min-h-[400px] overflow-x-auto">
+                    <div className="mermaid">
+                        {flowchart}
+                    </div>
                 </div>
             </div>
 

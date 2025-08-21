@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { SANTIAGO_CONTENT } from '../constants.tsx';
 import * as Icons from './Icons.tsx';
 import AccordionItem from './AccordionItem.tsx';
-import Amplifier from './Amplifier.tsx';
 import QuickFireQA from './QuickFireQA.tsx';
 
 const IntroView = () => {
     const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+    const [openExtraInfo, setOpenExtraInfo] = useState<number | null>(null);
     const [showVideo, setShowVideo] = useState(false);
     const { title, objective, videoUrl, alternatingSections, relevance, keyData, quickQA } = SANTIAGO_CONTENT.INTRO;
 
@@ -21,7 +21,6 @@ const IntroView = () => {
             }
         } catch (error) {
             console.error("Invalid YouTube URL", error);
-            // Fallback for simple cases if URL object fails
             const match = url.match(/(?:youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
             videoId = (match && match[1].length === 11) ? match[1] : '';
         }
@@ -32,6 +31,21 @@ const IntroView = () => {
     const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
     const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
+    const extraInfo = [
+        {
+            title: "La 'Epístola de Paja' - El Debate de Lutero",
+            content: "Martín Lutero apodó a Santiago la 'epístola de paja' porque sentía que contradecía la justificación 'solo por fe' al enfocarse en las obras. Hoy, se entiende que Pablo (raíz de la salvación: fe) y Santiago (fruto de la salvación: obras) ofrecen perspectivas complementarias de la misma verdad."
+        },
+        {
+            title: "Conexiones con el Sermón del Monte",
+            content: "La carta de Santiago contiene más de quince alusiones a las enseñanzas de Jesús en el Sermón del Monte (Mateo 5-7). Esto sugiere que Santiago estaba profundamente familiarizado con las enseñanzas de su hermano y buscaba aplicarlas de manera práctica."
+        },
+        {
+            title: "El Significado de 'Las Doce Tribus en la Dispersión'",
+            content: "Esta frase (Santiago 1:1) se refiere a los creyentes judeocristianos que vivían fuera de Palestina. Al usar este término, Santiago los identifica como el 'verdadero Israel', herederos de las promesas de Dios a través de su fe en Jesús como el Mesías."
+        }
+    ];
+
     return (
         <div className="space-y-12">
             <div>
@@ -39,7 +53,7 @@ const IntroView = () => {
                 <p className="text-lg text-gray-500">{objective}</p>
             </div>
 
-            <div className="rounded-2xl shadow-xl overflow-hidden aspect-video">
+            <div className="rounded-2xl shadow-xl overflow-hidden aspect-video bg-gray-800">
                 {showVideo && videoId ? (
                     <iframe
                         src={embedUrl}
@@ -50,20 +64,24 @@ const IntroView = () => {
                         className="w-full h-full"
                     ></iframe>
                 ) : (
-                    <div 
-                        className="w-full h-full bg-gray-800 flex flex-col items-center justify-center p-8 relative group bg-cover bg-center"
-                        style={{ backgroundImage: videoId ? `url(${thumbnailUrl})` : 'none' }}
+                    <div
+                        className="w-full h-full relative flex items-center justify-center group cursor-pointer bg-cover bg-center"
+                        style={videoId ? { backgroundImage: `url(${thumbnailUrl})` } : {}}
+                        onClick={() => { if (videoId) setShowVideo(true); }}
+                        role="button"
+                        tabIndex={videoId ? 0 : -1}
+                        aria-label="Reproducir video introductorio"
+                        onKeyDown={(e) => {
+                            if (videoId && (e.key === 'Enter' || e.key === ' ')) {
+                                setShowVideo(true);
+                            }
+                        }}
                     >
                         <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors"></div>
-                        <button 
-                            onClick={() => setShowVideo(true)}
-                            className="relative z-10 flex flex-col items-center justify-center text-white text-center"
-                            aria-label="Reproducir video introductorio"
-                            disabled={!videoId}
-                        >
+                        <div className="relative z-10 flex flex-col items-center justify-center text-white text-center pointer-events-none">
                             <Icons.PlayIcon className='w-20 h-20 text-white/80 group-hover:text-white group-hover:scale-110 transition-transform' />
                             <span className="mt-4 text-xl font-bold tracking-wider uppercase">Ver Video Introductorio</span>
-                        </button>
+                        </div>
                     </div>
                 )}
             </div>
@@ -109,7 +127,19 @@ const IntroView = () => {
                  </div>
                  <QuickFireQA question={quickQA.question} answer={quickQA.answer} />
             </div>
-            <Amplifier topic={title} baseText={objective} />
+             <div className="bg-white p-6 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Información Adicional</h3>
+                {extraInfo.map((item, index) => (
+                    <AccordionItem
+                        key={item.title}
+                        title={item.title}
+                        isOpen={openExtraInfo === index}
+                        onClick={() => setOpenExtraInfo(openExtraInfo === index ? null : index)}
+                    >
+                        <p>{item.content}</p>
+                    </AccordionItem>
+                ))}
+            </div>
         </div>
     );
 };

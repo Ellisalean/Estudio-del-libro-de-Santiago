@@ -10,6 +10,9 @@ export const SectionId = {
     CONTRIBUTION: 'CONTRIBUTION',
     CHAPTER_1: 'CHAPTER_1',
     CHAPTER_2: 'CHAPTER_2',
+    CHAPTER_3: 'CHAPTER_3',
+    CHAPTER_4: 'CHAPTER_4',
+    CHAPTER_5: 'CHAPTER_5',
     TRIVIA: 'TRIVIA'
 };
 
@@ -23,6 +26,9 @@ export const sectionsData = [
     { id: SectionId.CONTRIBUTION, title: 'Aportación', icon: Icons.BookOpenIcon },
     { id: SectionId.CHAPTER_1, title: 'Capítulo 1: Estudio', icon: Icons.AcademicCapIcon },
     { id: SectionId.CHAPTER_2, title: 'Capítulo 2: Estudio', icon: Icons.GavelIcon },
+    { id: SectionId.CHAPTER_3, title: 'Capítulo 3: Estudio', icon: Icons.ScaleIcon },
+    { id: SectionId.CHAPTER_4, title: 'Capítulo 4: Estudio', icon: Icons.ArrowsRightLeftIcon },
+    { id: SectionId.CHAPTER_5, title: 'Capítulo 5: Estudio', icon: Icons.HeartIcon },
     { id: SectionId.TRIVIA, title: 'Trivia IA', icon: Icons.QuestionMarkCircleIcon }
 ];
 
@@ -244,12 +250,183 @@ export const SANTIAGO_CHAPTER_2 = {
     }
 };
 
+export const SANTIAGO_CHAPTER_3 = {
+    header: {
+        title: "La Epístola de Santiago: Capítulo 3",
+        subtitle: "El Poder de la Lengua y la Sabiduría Verdadera",
+        description: "El capítulo 3 se sumerge en dos indicadores clave de la madurez espiritual: el control de la lengua y la manifestación de una sabiduría que proviene de Dios. Santiago utiliza metáforas poderosas para ilustrar el inmenso poder, tanto para bien como para mal, que reside en nuestras palabras. Luego, contrasta la sabiduría del mundo, llena de envidia y ambición, con la sabiduría celestial, que es pura, pacífica y misericordiosa.",
+        keyVerse: {
+            citation: "Santiago 3:17",
+            text: "Pero la sabiduría que es de lo alto es primeramente pura, después pacífica, amable, benigna, llena de misericordia y de buenos frutos, sin incertidumbre ni hipocresía."
+        }
+    },
+    section1: {
+        title: "El Poder Indomable de la Lengua",
+        verse: "Santiago 3:1-12",
+        metaphors: {
+            title: "Metáforas del Poder",
+            items: [
+                { name: "El Freno del Caballo", text: "Así como un pequeño freno dirige a un gran caballo, nuestras palabras dirigen nuestra vida.", icon: Icons.Cog8ToothIcon },
+                { name: "El Timón del Barco", text: "Un pequeño timón gobierna una nave inmensa en medio de la tormenta; la lengua tiene un poder similar.", icon: Icons.AnchorIcon },
+                { name: "El Fuego del Bosque", text: "Una pequeña chispa puede incendiar un bosque entero, ilustrando el potencial destructivo de la lengua.", icon: Icons.SparklesIcon }
+            ]
+        },
+        analogy: {
+            title: "La Analogía de la Fuente",
+            verse: "Santiago 3:11-12",
+            text: "Santiago argumenta que es una contradicción fundamental que de la misma boca salgan bendición y maldición. Lo compara con una fuente: no puede brotar agua dulce y amarga del mismo manantial. Esta inconsistencia revela un problema en el corazón, la fuente de nuestras palabras.",
+            imageUrl: "https://cdn.myportfolio.com/d435fa58-d32c-4141-8a15-0f2bfccdea41/59c04355-9e0a-449c-96dd-a5318b7bbae4_rw_1920.png?h=012a955835c2439ea864e7e1327c0302"
+        }
+    },
+    section2: {
+        title: "Las Dos Sabidurías",
+        verse: "Santiago 3:13-18",
+        comparison: {
+            title: "Sabiduría Terrenal vs. Sabiduría Celestial",
+            earthly: {
+                title: "Sabiduría Terrenal",
+                icon: Icons.GlobeIcon,
+                characteristics: [
+                    "Origen: Terrenal, animal, diabólica.",
+                    "Motivación: Celos amargos y contención (ambición egoísta).",
+                    "Resultado: Perturbación y toda obra perversa."
+                ]
+            },
+            heavenly: {
+                title: "Sabiduría Celestial",
+                icon: Icons.LightBulbIcon,
+                characteristics: [
+                    "Origen: Desciende 'de lo alto' (de Dios).",
+                    "Motivación: Mansedumbre y humildad.",
+                    "Resultado: Pura, pacífica, amable, benigna, llena de misericordia y buenos frutos."
+                ]
+            }
+        }
+    },
+    application: {
+        title: "Aplicación Práctica",
+        points: [
+            { title: "El Desafío del Silencio", content: "Practica el 'pronto para oír, tardo para hablar' (1:19). Antes de hablar, especialmente en una discusión, haz una pausa y pregúntate: ¿esto edificará, sanará o destruirá?" },
+            { title: "Diagnóstico del Corazón", content: "Usa tus palabras como un diagnóstico. Si notas un patrón de crítica, queja o exageración, en lugar de solo corregir las palabras, pregúntale a Dios qué hay en tu corazón que las está produciendo." },
+            { title: "Busca el Fruto de la Paz", content: "En tus decisiones y relaciones, no te preguntes '¿qué es lo más inteligente?' o '¿qué me beneficia más?', sino '¿qué producirá el 'fruto de justicia' que se siembra en paz?' (3:18). La verdadera sabiduría siempre conduce a la paz." }
+        ]
+    }
+};
+
+export const SANTIAGO_CHAPTER_4 = {
+    header: {
+        title: "La Epístola de Santiago: Capítulo 4",
+        subtitle: "Guerra Interior, Humildad Exterior",
+        description: "Santiago se adentra en la raíz de los conflictos que plagan a la comunidad: las pasiones y deseos egoístas que luchan en nuestro interior. Este capítulo es un llamado radical a abandonar la 'amistad con el mundo' —un sistema de valores centrado en el yo— y a someterse humildemente a Dios. Santiago diagnostica el problema (el orgullo) y ofrece la cura (la gracia que Dios da a los humildes).",
+        keyVerse: {
+            citation: "Santiago 4:7-8",
+            text: "Someteos, pues, a Dios; resistid al diablo, y huirá de vosotros. Acercaos a Dios, y él se acercará a vosotros."
+        }
+    },
+    section1: {
+        title: "El Origen de los Conflictos",
+        verse: "Santiago 4:1-12",
+        flow: {
+            title: "La Cascada del Conflicto",
+            steps: [
+                { title: "Deseos Internos (Pasiones)", description: "La raíz de todo: codicia, envidia y el deseo de placer.", icon: Icons.HeartIcon },
+                { title: "Conflicto y Lucha", description: "Estos deseos no satisfechos llevan a peleas y disputas con otros.", icon: Icons.ArrowsRightLeftIcon },
+                { title: "Oraciones sin Respuesta", description: "Se pide a Dios con motivaciones incorrectas: para gastar en los propios deleites.", icon: Icons.XCircleIcon },
+                { title: "Amistad con el Mundo", description: "El resultado es un adulterio espiritual, adoptando los valores egoístas del mundo.", icon: Icons.GlobeIcon }
+            ]
+        },
+        solution: {
+            title: "El Camino de Regreso a Dios",
+            text: "La solución de Santiago es un arrepentimiento profundo y activo: 'Limpiad las manos, pecadores; y vosotros los de doble ánimo, purificad vuestros corazones' (4:8). Implica humillarse, lamentar el pecado y permitir que Dios nos exalte en su tiempo. También incluye dejar de juzgar y hablar mal de los hermanos, reconociendo que solo hay un Legislador y Juez."
+        }
+    },
+    section2: {
+        title: "La Arrogancia de la Autosuficiencia",
+        verse: "Santiago 4:13-17",
+        analogy: {
+            title: "La Vida es como un Vapor",
+            description: "Santiago confronta la arrogancia de planificar el futuro sin considerar a Dios. Describe la vida como 'neblina que se aparece por un poco de tiempo, y luego se desvanece' (4:14). Esta imagen subraya nuestra fragilidad y dependencia de Dios.",
+            imageUrl: "https://cdn.myportfolio.com/d435fa58-d32c-4141-8a15-0f2bfccdea41/807dc1f1-ae90-4956-ba4e-683848aeb790_rw_1920.png?h=a22be4988de2eba53266299bd2bdf774"
+        },
+        rightVsWrong: {
+            title: "Planificación Arrogante vs. Planificación Piadosa",
+            arrogant: { title: "La Manera Incorrecta", quote: "'Hoy y mañana iremos a tal ciudad, y estaremos allá un año, y traficaremos, y ganaremos...'", problem: "Presume del futuro y excluye a Dios de la ecuación." },
+            godly: { title: "La Manera Correcta", quote: "'Si el Señor quiere, viviremos y haremos esto o aquello.'", solution: "Reconoce la soberanía de Dios y somete todos los planes a Su voluntad." }
+        }
+    },
+    application: {
+        title: "Aplicación Práctica",
+        points: [
+            { title: "Identifica la Raíz", content: "Cuando surja un conflicto, no te centres solo en la ofensa externa. Pregúntate: ¿Qué deseo o pasión en mí está siendo frustrado y causando esta reacción?" },
+            { title: "Practica el 'Si el Señor Quiere'", content: "Al hacer planes (diarios, semanales, anuales), añade conscientemente la frase 'si el Señor quiere'. No como un cliché, sino como un recordatorio genuino de tu dependencia de Él." },
+            { title: "El Pecado de Omisión", content: "Reflexiona en el versículo final (4:17): 'y al que sabe hacer lo bueno, y no lo hace, le es pecado'. ¿Hay alguna acción buena que Dios te ha estado llamando a hacer y que has estado posponiendo? Actúa hoy." }
+        ]
+    }
+};
+
+export const SANTIAGO_CHAPTER_5 = {
+    header: {
+        title: "La Epístola de Santiago: Capítulo 5",
+        subtitle: "Paciencia, Oración y Restauración",
+        description: "En su capítulo final, Santiago ofrece algunas de sus advertencias más severas y sus consuelos más tiernos. Comienza con una denuncia profética contra los ricos opresores, luego se dirige a los creyentes sufrientes, exhortándolos a la paciencia y la perseverancia. El libro concluye con un poderoso llamado a una vida de oración ferviente y a la práctica de la restauración mutua dentro de la comunidad de fe.",
+        keyVerse: {
+            citation: "Santiago 5:16",
+            text: "Confesaos vuestras ofensas unos a otros, y orad unos por otros, para que seáis sanados. La oración eficaz del justo puede mucho."
+        }
+    },
+    section1: {
+        title: "Advertencia a los Ricos Opresores",
+        verse: "Santiago 5:1-6",
+        warnings: {
+            title: "Señales del Juicio Venidero",
+            points: [
+                { icon: Icons.XCircleIcon, title: "Riquezas Corrompidas", text: "Sus tesoros acumulados se han podrido y sus metales preciosos testificarán contra ellos." },
+                { icon: Icons.GavelIcon, title: "Salarios Retenidos", text: "El jornal de los obreros que defraudaron clama a Dios por justicia." },
+                { icon: Icons.UserIcon, title: "Vida de Lujo y Placer", text: "Vivieron en deleites sobre la tierra, engordando sus corazones para el día de la matanza." },
+                { icon: Icons.CheckCircleIcon, title: "Condena al Justo", text: "Han condenado y dado muerte al justo, que no les ofreció resistencia." }
+            ]
+        }
+    },
+    section2: {
+        title: "Llamado a la Paciencia y la Oración",
+        verse: "Santiago 5:7-20",
+        examples: {
+            title: "Modelos de Paciencia",
+            cards: [
+                { name: "El Labrador", lesson: "Espera con paciencia el fruto precioso de la tierra, aguardando las lluvias.", imageUrl: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070&auto=format&fit=crop" },
+                { name: "Los Profetas", lesson: "Soportaron el sufrimiento mientras hablaban en el nombre del Señor.", imageUrl: "https://cdn.myportfolio.com/d435fa58-d32c-4141-8a15-0f2bfccdea41/6686f795-902d-4032-b87f-7abf0f5ab63b_rw_1920.png?h=f9b85ad4b847806ab4e8854d435dc89e" },
+                { name: "Job", lesson: "Su perseverancia es un testimonio de que el fin del Señor es de gran compasión y misericordia.", imageUrl: "https://cdn.myportfolio.com/d435fa58-d32c-4141-8a15-0f2bfccdea41/0d18894e-c0f1-41b6-a06f-6a803716252b_rw_1920.png?h=5e64519b40eeef2c4a5b958bf325d4d1" }
+            ]
+        },
+        prayerGuide: {
+            title: "Una Guía Práctica para la Oración",
+            situations: [
+                { situation: "¿Estás sufriendo?", action: "Ora.", verse: "v. 13" },
+                { situation: "¿Estás alegre?", action: "Canta alabanzas.", verse: "v. 13" },
+                { situation: "¿Estás enfermo?", action: "Llama a los ancianos de la iglesia para que oren y te unjan.", verse: "v. 14" },
+                { situation: "¿Has pecado?", action: "Confiésalo a tus hermanos y ora por ellos.", verse: "v. 16" }
+            ],
+            example: {
+                title: "El Poder de la Oración: Elías",
+                text: "Santiago recuerda a sus lectores que Elías era un hombre con una naturaleza como la nuestra. Sin embargo, 'oró fervientemente para que no lloviese, y no llovió... y otra vez oró, y el cielo dio lluvia'. Este ejemplo demuestra que la oración ferviente de una persona justa tiene un poder extraordinario."
+            }
+        }
+    },
+    application: {
+        title: "Aplicación Práctica",
+        points: [
+            { title: "Evalúa tu Relación con el Dinero", content: "¿Estás acumulando tesoros en la tierra o en el cielo? ¿Eres justo en todos tus tratos financieros y generoso con lo que Dios te ha dado?" },
+            { title: "Cultiva la Paciencia Activa", content: "Cuando enfrentes una prueba larga, imita al labrador. No esperes pasivamente, sino sigue trabajando y confiando en que Dios enviará la 'lluvia' a su debido tiempo." },
+            { title: "Crea una Cultura de Restauración", content: "Busca activamente restaurar a un hermano que se haya desviado. No con un espíritu de juicio, sino con amor, sabiendo que 'el que haga volver a un pecador del error de su camino, salvará de muerte un alma, y cubrirá multitud de pecados' (5:20)." }
+        ]
+    }
+};
 
 export const SANTIAGO_CONTENT = {
     INTRO: {
         title: "Introducción al Libro de Santiago",
         objective: "Presentar al autor, el contexto histórico, los destinatarios y el propósito central del libro de Santiago, estableciendo las bases para su estudio detallado.",
-        videoUrl: "https://youtu.be/CixYzLVKj6I", // Example URL
+        videoUrl: "https://www.youtube.com/watch?v=CixYzLVKj6I",
         alternatingSections: [
             {
                 title: "Una Fe Práctica y Sin Hipocresía",
@@ -291,7 +468,7 @@ export const SANTIAGO_CONTENT = {
         content: {
             biography: {
                 sections: [
-                    { title: "¿Quién fue Santiago?", content: "Tradicionalmente identificado como el 'hermano del Señor' (Gálatas 1:19), Santiago no fue uno de los doce apóstoles originales. Inicialmente escéptico (Juan 7:5), se convirtió en un creyente clave tras ser testigo de la resurrección de Jesús (1 Corintios 15:7). Su piedad y sabiduría lo llevaron a convertirse en el líder indiscutible de la iglesia en Jerusalén, una figura de enorme respeto tanto para creyentes judíos como gentiles.", tooltip: { term: "hermano del Señor", definition: "El término 'hermano' (adelphos) puede significar hermano de sangre, hermanastro o primo cercano. La tradición mayoritaria lo considera hijo de María y José." } },
+                    { title: "¿Quién fue Santiago?", content: "Tradicionalmente identificado como el 'hermano del Señor' (Gálatas 1:19), Santiago no fue uno de los doce apóstoles originales. Inicialmente escéptico (Juan 7:5), se convirtió en un creyente clave tras ser testigo de la resurrección de Jesús (1 Corintios 15:7). Su piedad y sabiduría lo llevaron a convertirse en el líder indiscutible de la iglesia en Jerusalén, una figura de enorme respeto tanto para creyentes judíos como gentiles." },
                     { title: "Liderazgo y Relevancia", content: "Como obispo de Jerusalén, Santiago jugó un papel decisivo en el <Tooltip text='Reunión clave (49 d.C.) donde se decidió que los gentiles convertidos al cristianismo no necesitaban seguir la ley mosaica.'>Concilio de Jerusalén</Tooltip>. Su veredicto (Hechos 15:13-21) fue fundamental para la unidad de la iglesia primitiva, reconciliando las facciones judeo-cristianas y las misiones a los gentiles lideradas por Pablo. Fue considerado una de las tres 'columnas' de la iglesia, junto con Pedro y Juan (Gálatas 2:9)." }
                 ],
                 timeline: [
@@ -366,7 +543,7 @@ export const SANTIAGO_CONTENT = {
         controversy: {
             title: "Controversias y Debates",
             text: "La controversia más famosa es la aparente contradicción entre la 'justificación por obras' de Santiago (2:24) y la 'justificación por fe' de Pablo (Romanos 3:28). Martín Lutero, en su momento, llegó a dudar del lugar de Santiago en la Biblia. Sin embargo, hoy la mayoría de los teólogos ven sus enseñanzas como complementarias. Pablo se enfoca en la raíz de la salvación (la fe que nos declara justos ante Dios), mientras que Santiago se enfoca en el fruto (las obras que demuestran que esa fe es genuina y viva). No son dos caminos a la salvación, sino dos aspectos inseparables de la misma realidad.",
-            quote: "Muéstrame tu fe sin obras, y yo te mostraré mi fe por mis obras. (Santiago 2:18)"
+            quote: "<Tooltip text='Este versículo es el corazón del argumento de Santiago: la fe genuina no puede mantenerse en privado; debe ser visible y demostrable.'>Muéstrame tu fe sin obras, y yo te mostraré mi fe por mis obras. (Santiago 2:18)</Tooltip>"
         },
         engagement: {
             title: "Para Reflexionar",
@@ -482,76 +659,57 @@ export const SANTIAGO_CONTENT = {
         comparison: {
             title: "Fe y Obras: Dos Caras de la Misma Moneda",
             subtitle: "Pablo y Santiago abordan la salvación desde ángulos complementarios. Pablo se enfoca en la raíz (la fe que justifica), mientras que Santiago se enfoca en el fruto (las obras que demuestran esa fe).",
-            pablo: { name: "Pablo", focus: "La Raíz de la Salvación", quote: "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios; no por obras, para que nadie se gloríe.", citation: "Efesios 2:8-9", Icon: Icons.HeartIcon },
-            santiago: { name: "Santiago", focus: "El Fruto de la Salvación", quote: "Así también la fe, si no tiene obras, es muerta en sí misma... Yo te mostraré mi fe por mis obras.", citation: "Santiago 2:17-18", Icon: Icons.Cog8ToothIcon }
+            pablo: {
+                name: "Pablo",
+                focus: "La Raíz de la Salvación",
+                quote: "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios; no por obras, para que nadie se gloríe.",
+                citation: "Efesios 2:8-9",
+                Icon: Icons.GavelIcon
+            },
+            santiago: {
+                name: "Santiago",
+                focus: "El Fruto de la Salvación",
+                quote: "¿Mas quieres saber, hombre vano, que la fe sin obras es muerta? ...Porque como el cuerpo sin espíritu está muerto, así también la fe sin obras está muerta.",
+                citation: "Santiago 2:20, 26",
+                Icon: Icons.HeartIcon
+            }
         },
         keyContributions: [
-            { title: "El 'Ancla' de la Ortodoxia", content: "Proporciona un correctivo vital contra la 'fe fácil' o puramente intelectual. Exige que la doctrina correcta (ortodoxia) se manifieste en una vida correcta (ortopraxis).", Icon: Icons.AnchorIcon },
-            { title: "La Voz de la Justicia Social", content: "Es uno de los defensores más feroces de los pobres y oprimidos en el Nuevo Testamento. Su carta da un rostro a la justicia social como un elemento no negociable de la fe.", Icon: Icons.ScaleIcon },
-            { title: "Manual para la Madurez", content: "Más allá de la teología, la epístola es un manual práctico para la vida diaria, abordando temas como el control de la lengua, la sabiduría y la oración con una claridad inigualable.", Icon:Icons.AcademicCapIcon }
+            { title: "Defensa de la Justicia Social", content: "Santiago ofrece una de las críticas más fuertes del Nuevo Testamento contra la opresión de los pobres y el favoritismo hacia los ricos, estableciendo un estándar ético para la comunidad cristiana.", Icon: Icons.ScaleIcon },
+            { title: "Madurez a través de las Pruebas", content: "Introduce el concepto de que las pruebas no son para destruir, sino para perfeccionar la fe, produciendo paciencia y un carácter completo.", Icon: Icons.SparklesIcon },
+            { title: "El Poder de las Palabras", content: "Su enseñanza sobre el control de la lengua es una de las más detalladas y prácticas de la Biblia, fundamental para la salud de la comunidad.", Icon: Icons.FeatherIcon }
         ],
         relevance: {
-            title: "Un Desafío para el Cristiano del Siglo XXI",
-            text: "En una era de 'influencers' y apariencias, Santiago nos llama a una autenticidad radical. Nos pregunta: ¿Tu fe se queda en tus redes sociales y conversaciones, o se traduce en cómo tratas al inmigrante, al pobre y al que piensa diferente? Su mensaje es un antídoto poderoso contra un cristianismo superficial y nominal.",
-            quote: "¿De qué sirve, hermanos míos, si alguno dice que tiene fe, y no tiene obras? ¿Podrá la fe salvarle?"
+            title: "Relevancia Duradera",
+            text: "En una era de 'cristianismo cultural' o fe nominal, Santiago es un antídoto necesario. Desafía a cada creyente y a cada iglesia a examinar la autenticidad de su fe. Su mensaje no es 'obras para ser salvo', sino 'obras porque eres salvo', una verdad que sigue siendo vital para la iglesia hoy.",
+            quote: "Santiago no enseña una salvación por obras, sino una fe que obra."
         }
     },
     TRIVIA_STATIC: {
         triviaQuestions: [
             {
-                question: 'Según Santiago, ¿qué es la "religión pura y sin mácula"?',
-                options: [
-                    "Asistir a la sinagoga regularmente",
-                    "Guardar estrictamente la ley de Moisés",
-                    "Visitar a los huérfanos y a las viudas en sus tribulaciones",
-                    "Ofrecer sacrificios y ofrendas"
-                ],
-                answerIndex: 2,
-                explanation: 'Santiago 1:27 dice: "La religión pura y sin mácula delante de Dios el Padre es esta: Visitar a los huérfanos y a las viudas en sus tribulaciones, y guardarse sin mancha del mundo."'
-            },
-            {
-                question: '¿Con qué compara Santiago la lengua para ilustrar su poder destructivo?',
-                options: [
-                    "Con una espada de doble filo",
-                    "Con un pequeño fuego que incendia un gran bosque",
-                    "Con un león rugiente buscando a quien devorar",
-                    "Con una tormenta repentina en el mar"
-                ],
+                question: "¿Qué metáfora utiliza Santiago para describir a una persona que duda?",
+                options: ["Un árbol arrancado por el viento", "Una ola del mar, impulsada por el viento", "Una nube sin agua", "Una estrella errante"],
                 answerIndex: 1,
-                explanation: 'En Santiago 3:5-6, la lengua se compara con un pequeño fuego que puede causar una destrucción masiva, mostrando su poder para el mal cuando no se controla.'
+                explanation: "En Santiago 1:6, se compara al que duda con 'la onda del mar, que es arrastrada por el viento y echada de una parte a otra'."
             },
             {
-                question: '¿Cuál es la declaración más famosa de Santiago sobre la relación entre la fe y las obras?',
-                options: [
-                    '"La fe tiene el poder de mover montañas"',
-                    '"Las buenas obras son el fruto de una fe verdadera"',
-                    '"La fe, si no tiene obras, es muerta en sí misma"',
-                    '"Porque por gracia sois salvos por medio de la fe"'
-                ],
+                question: "Según Santiago, ¿cuál es la 'ley real' que resume los mandamientos?",
+                options: ["No cometerás adulterio", "Honra a tu padre y a tu madre", "Amarás a tu prójimo como a ti mismo", "No darás falso testimonio"],
                 answerIndex: 2,
-                explanation: 'Santiago 2:17 resume su argumento principal: "Así también la fe, si no tiene obras, es muerta en sí misma", enfatizando que la fe genuina siempre se manifiesta en acciones concretas.'
+                explanation: "Santiago 2:8 cita Levítico 19:18, 'Amarás a tu prójimo como a ti mismo', y la llama la 'Ley Real'."
             },
             {
-                question: '¿A quiénes se dirige principalmente la epístola de Santiago en su saludo inicial?',
-                options: [
-                    "A los creyentes gentiles en la ciudad de Roma",
-                    "A las iglesias de la región de Galacia",
-                    "A las doce tribus que están en la dispersión",
-                    "A los santos que están en Corinto"
-                ],
+                question: "Además de Abraham, ¿a qué otra persona del Antiguo Testamento menciona Santiago como ejemplo de fe justificada por obras?",
+                options: ["Moisés", "David", "Elías", "Rahab"],
+                answerIndex: 3,
+                explanation: "En Santiago 2:25, menciona a Rahab la ramera, quien 'fue justificada por obras, cuando recibió a los mensajeros y los envió por otro camino'."
+            },
+            {
+                question: "Santiago advierte que los maestros recibirán un juicio más severo porque pueden tropezar fácilmente en una área. ¿Cuál es?",
+                options: ["En el orgullo", "En la interpretación doctrinal", "En la palabra (con la lengua)", "En la gestión financiera"],
                 answerIndex: 2,
-                explanation: 'Santiago 1:1 comienza con el saludo: "Santiago, siervo de Dios y del Señor Jesucristo, a las doce tribus que están en la dispersión: Salud."'
-            },
-            {
-                question: '¿Qué consejo práctico da Santiago a aquel que está falto de sabiduría?',
-                options: [
-                    "Que estudie las escrituras diligentemente día y noche",
-                    "Que la pida a Dios, quien da a todos abundantemente y sin reproche",
-                    "Que busque el consejo de los ancianos más sabios de la iglesia",
-                    "Que medite en la ley para encontrar la guía divina"
-                ],
-                answerIndex: 1,
-                explanation: 'Santiago 1:5 anima: "Y si alguno de vosotros tiene falta de sabiduría, pídala a Dios, el cual da a todos abundantemente y sin reproche, y le será dada."'
+                explanation: "Santiago 3:1-2 advierte a no hacerse maestros muchos, sabiendo que recibirán 'mayor condenación', porque 'todos ofendemos muchas veces. Si alguno no ofende en palabra, este es varón perfecto'."
             }
         ]
     }
